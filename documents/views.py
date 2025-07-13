@@ -70,8 +70,6 @@ class DocumentViewSet(viewsets.ModelViewSet):
         # Get document scores
         scores = bm25.get_scores(tokenized_query)
         scores = np.abs(scores)
-
-        print(scores)
         
         # Create results with metadata
         results = []
